@@ -5,9 +5,7 @@
 * Constants are added in constant.py file    
 * Github workflow set for CI runs.
 * Run flake8 command to check for lint checks.
-
-
-make flake8:
-make requirement:
-make run-test:
-make generate-report
+* make flake8
+* make requirement
+* make run-test
+* make generate-report
