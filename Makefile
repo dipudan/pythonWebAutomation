@@ -4,3 +4,9 @@ run-test:
 generate-report:
 	allure generate --single-file --clean allure-results
 
+requirement:
+	pip install -r requirements.txt
+
+flake8:
+	flake8 .
+
