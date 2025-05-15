@@ -1,0 +1,25 @@
+# Default IntelliJ IDEA project files
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+gen/
+allure-results/
+allure-report/
+
+# Logs and temp files
+*.log
+*.tmp
+*.bak
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Python-specific (for PyCharm)
+__pycache__/
+*.py[cod]
+.env/
+venv/
+*.egg-info/
