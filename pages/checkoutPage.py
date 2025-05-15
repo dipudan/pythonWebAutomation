@@ -10,10 +10,11 @@ class CheckoutPage:
     txt_lastName = (By.NAME, 'lastName')
     txt_zipcode = (By.NAME, 'postalCode')
     btn_continue = (By.ID, 'continue')
-    btn_finish =(By.ID, 'finish')
+    btn_finish = (By.ID, 'finish')
 
     @allure.step('Checking out item added to cart.')
-    def checkout_item(self, driver: webdriver, fname: str, lname: str, zip: str):
+    def checkout_item(self, driver: webdriver,
+                      fname: str, lname: str, zip: str):
         driver.find_element(*self.lnk_cart_icon).click()
         driver.find_element(*self.btn_chkOut).click()
         driver.find_element(*self.txt_firstName).send_keys(fname)
