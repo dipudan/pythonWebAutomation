@@ -43,10 +43,10 @@ jobs:
       run: |
         make generate-report     
 
-    - name: Upload test results
-      uses: actions/upload-artifact@v3
-      with:
-        name: test-reports
-        path: |
-          allure-report/index.html
-        retention-days: 3
+#    - name: Upload test results
+#      uses: actions/upload-artifact@v3
+#      with:
+#        name: test-reports
+#        path: |
+#          allure-report/index.html
+#        retention-days: 3
