@@ -43,7 +43,7 @@ jobs:
       uses: simple-elf/allure-report-action@v1
       with:
         allure-results: allure-results
-        output-path: allure-report
+        allure_report: allure-report
 
     - name: Verify report exists
       run: ls -la allure-report/  # Debug step
