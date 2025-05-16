@@ -39,14 +39,8 @@ jobs:
       run: |
         make run-test
 
-    - name: Generate allure report
-      run: |
-        make generate-report     
-
-#    - name: Upload test results
-#      uses: actions/upload-artifact@v3
-#      with:
-#        name: test-reports
-#        path: |
-#          allure-report/index.html
-#        retention-days: 3
+    - name: Generate Allure report
+      uses: simple-elf/allure-report-action@v1
+      with:
+        allure-results: allure-results
+        output-path: allure-report
