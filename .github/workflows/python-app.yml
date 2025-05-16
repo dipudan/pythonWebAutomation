@@ -52,3 +52,4 @@ jobs:
         name: test-reports
         path: allure-report/index.html
         if-no-files-found: warn
+        retention-days: 3
