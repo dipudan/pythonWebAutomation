@@ -40,3 +40,8 @@ jobs:
     - name: Test with pytest
       run: |
         make run-test
+
+    - name: Generate allure report
+      run: |
+        make run-test
+        generate-report     
