@@ -12,9 +12,7 @@ permissions:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
 
     - uses: browser-actions/setup-chrome@v1
@@ -29,13 +27,7 @@ jobs:
 
     - name: Install Allure
       run: |
-        sudo apt-get update
-        sudo apt-get install -y openjdk-11-jdk
-        wget https://github.com/allure-framework/allure2/releases/download/2.24.1/allure-2.24.1.tgz
-        tar -zxvf allure-2.24.1.tgz
-        sudo mv allure-2.24.1 /opt/allure
-        sudo ln -s /opt/allure/bin/allure /usr/bin/allure
-        echo "/opt/allure/bin" >> $GITHUB_PATH
+        make install-allure
 
     - name: Install dependencies
       run: |
@@ -52,7 +44,7 @@ jobs:
 
     - name: Generate Allure report
       run: |
-        allure generate --single-file --clean allure-results -o allure-report
+        make generate-report
 
     - name: Upload test results
       uses: actions/upload-artifact@v4
